@@ -1,12 +1,19 @@
-﻿Console.Write("Введите трехзначное число: ");
+﻿Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number >= 100)
+while (number >= 1000)
 {
-    int endCh = number % 10;
-    Console.WriteLine(endCh);
+    number /= 10;
+}
+if (number < 100)
+{
+    Console.Write("Третьего числа нет  -1");
 }
 else
 {
-   Console.Write("Третьего числа нет  -1"); 
+    number = number % 10;
+    Console.WriteLine(number);
 }
+
+
+
 
